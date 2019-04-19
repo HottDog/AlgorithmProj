@@ -1,7 +1,10 @@
 #pragma once
+#define EH 0    //表示左子树
+#define LH 1    //表示左子树比右子树高1
+#define RH -1   //表示右子树比左子树高1
 typedef struct _Node {
 	int value;
-	int bf;   //平衡因子，
+	int bf;   //平衡因子，左子树的深度减去右子树的深度
 	_Node * left, *right;
 } Node,*Tree;
 
@@ -22,3 +25,17 @@ bool DeleteNode(Tree& tree,int val);
 
 // 中序遍历输出所有子节点
 void InorderRevers(Tree tree);
+
+void Print(Tree tree);
+
+// 右旋
+void RightRotate(Tree &tree);
+
+// 左旋
+void LeftRotate(Tree &tree);
+
+// 右平衡，当右边高时
+void RightBalance(Tree &tree);
+
+// 左平衡，当左边高时
+void LeftBalance(Tree &tree);

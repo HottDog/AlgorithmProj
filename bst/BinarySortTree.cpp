@@ -1,6 +1,23 @@
 #include"BinarySortTree.h"
 #include<iostream>
+#include<queue>
 using namespace std;
+
+void Print(Tree tree,int layer)
+{
+	struct treeDesc
+	{
+		Tree node;
+		int layer;
+	};
+	queue<treeDesc> nodes;
+	nodes.push(tree   Desc(tree,0));
+	while (!nodes.empty())
+	{
+		
+	}
+}
+
 bool SearchTree(Tree tree, int val, Tree pre, Tree & result)
 {
 	if (!tree) {
@@ -106,4 +123,64 @@ void InorderRevers(Tree tree) {
 	InorderRevers(tree->left);
 	cout << tree->value << ",";
 	InorderRevers(tree->right);
+}
+
+void RightRotate(Tree &tree)
+{
+	Node * temp = tree;
+	//将树的左子树置为树节点
+	tree = tree->left;
+	//将新的树节点的右子树置为原来的树节点的左子树
+	temp->left = tree->right;
+	//把原来的树节点置为新的树节点的右子树
+	tree->right = temp;
+	
+}
+
+void LeftRotate(Tree &tree)
+{
+	Node * temp = tree;
+	tree = tree->right;
+	temp->right = tree->left;
+	tree->left = temp;
+}
+
+void RightBalance(Tree &tree)
+{
+	Node * right,*rightLeft;
+	right = tree->right;
+	switch (right->bf)
+	{
+	case RH:
+		tree->bf = EH;
+		right->bf = EH;
+		LeftRotate(tree);
+		break;
+	case EH:
+		tree->bf = RH;
+		right->bf = LH;
+		LeftRotate(tree);
+		break;
+	case LH:
+		rightLeft = right->left;
+		switch (rightLeft->bf)
+		{
+		case EH:
+			tree->bf = EH;
+			break;
+		case RH:
+			tree->bf = EH;
+			break;
+		case LH:
+			tree->bf = RH;
+			right->bf = EH;
+		}
+	default:
+		break;
+	}
+}
+
+void LeftBalance(Tree &tree)
+{
+
 }

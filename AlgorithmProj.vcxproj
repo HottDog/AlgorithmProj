@@ -116,6 +116,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bst\BinarySortTree.cpp" />
+    <ClCompile Include="bst\RedBlackTree.cpp" />
+    <ClCompile Include="bst\util.cpp" />
     <ClCompile Include="commonalgorithm.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test1.cpp" />
@@ -123,6 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bst\BinarySortTree.h" />
+    <ClInclude Include="bst\RedBlackTree.h" />
+    <ClInclude Include="bst\util.h" />
     <ClInclude Include="commonalgorithm.h" />
     <ClInclude Include="itask.h" />
     <ClInclude Include="test1.h" />

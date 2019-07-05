@@ -33,6 +33,12 @@
     <ClCompile Include="TestBST.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="bst\util.cpp">
+      <Filter>brt</Filter>
+    </ClCompile>
+    <ClCompile Include="bst\RedBlackTree.cpp">
+      <Filter>brt</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="itask.h">
@@ -49,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="TestBST.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bst\util.h">
+      <Filter>brt</Filter>
+    </ClInclude>
+    <ClInclude Include="bst\RedBlackTree.h">
+      <Filter>brt</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

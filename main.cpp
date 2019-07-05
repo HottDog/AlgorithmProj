@@ -6,8 +6,8 @@ using namespace std;
 
 int main() {
 	ITask * task;
-	//task = new Test1();
-	task = new TestBST;
+	task = new Test1();
+	//task = new TestBST;
 	task->Run();
 	system("pause");
 	return 0;
